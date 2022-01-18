@@ -17,7 +17,12 @@ build-2000903025: ../nvsinternal.syscfg
 	@echo 'Finished building: "$<"'
 	@echo ' '
 
-syscfg/ti_devices_config.c: build-2000903025 ../nvsinternal.syscfg
+syscfg/ti_easylink_config.h: build-2000903025 ../nvsinternal.syscfg
+syscfg/ti_easylink_config.c: build-2000903025
+syscfg/device_config.opt: build-2000903025
+syscfg/ti_devices_config.c: build-2000903025
+syscfg/ti_radio_config.c: build-2000903025
+syscfg/ti_radio_config.h: build-2000903025
 syscfg/ti_drivers_config.c: build-2000903025
 syscfg/ti_drivers_config.h: build-2000903025
 syscfg/ti_utils_build_linker.cmd.genlibs: build-2000903025

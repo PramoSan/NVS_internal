@@ -47,10 +47,18 @@ syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/nvs/NVSCC26XX.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/power/PowerCC26X2.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Temperature.h
-syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/uart2/UART2CC26X2.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/ioc.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/gpio.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_gpio.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/rf/RF.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/rf/RFCC26X2.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rf_common_cmd.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rf_mailbox.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/string.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/xlocale/_string.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rf_prop_cmd.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rf_ble_cmd.h
+syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/uart2/UART2CC26X2.h
 syscfg/ti_drivers_config.obj: /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Board.h
 
 syscfg/ti_drivers_config.c:
@@ -147,13 +155,29 @@ syscfg/ti_drivers_config.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Temperature.h:
 
-/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/uart2/UART2CC26X2.h:
-
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/ioc.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/gpio.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/inc/hw_gpio.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/rf/RF.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/rf/RFCC26X2.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rf_common_cmd.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rf_mailbox.h:
+
+/home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/string.h:
+
+/home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/xlocale/_string.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rf_prop_cmd.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/devices/cc13x2_cc26x2/driverlib/rf_ble_cmd.h:
+
+/home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/uart2/UART2CC26X2.h:
 
 /home/pramodh/ti/simplelink_cc13xx_cc26xx_sdk_5_30_01_01/source/ti/drivers/Board.h:
 

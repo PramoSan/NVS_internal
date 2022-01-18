@@ -11,8 +11,8 @@
 // This is also called "boost mode"
 //#####################################
 
-// Use default VDDR trim
-#define CCFG_FORCE_VDDR_HH                              0x0
+// Force VDDR voltage to the factory HH setting (FCFG1..VDDR_TRIM_HH)
+#define CCFG_FORCE_VDDR_HH                              0x1
 
 
 //#####################################
@@ -47,8 +47,18 @@
 // Bootloader settings
 //#####################################
 
-// Disable ROM boot loader
-#define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE            0x00
+// Enable ROM boot loader
+#define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE            0xC5
+
+// Enabled boot loader backdoor
+#define SET_CCFG_BL_CONFIG_BL_ENABLE                    0xC5
+
+// DIO number for boot loader backdoor
+#define SET_CCFG_BL_CONFIG_BL_PIN_NUMBER                0xf
+
+// Active low to open boot loader backdoor
+#define SET_CCFG_BL_CONFIG_BL_LEVEL                     0x0
+
 
 // Default address in IMAGE_VALID_CONF register
 #define SET_CCFG_IMAGE_VALID_CONF_IMAGE_VALID           0x00000000

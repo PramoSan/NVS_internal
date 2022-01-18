@@ -41,6 +41,12 @@ extern "C" {
 /*
  *  ======== GPIO ========
  */
+extern const uint_least8_t CONFIG_GPIO_RLED_CONST;
+#define CONFIG_GPIO_RLED 6
+
+extern const uint_least8_t CONFIG_GPIO_GLED_CONST;
+#define CONFIG_GPIO_GLED 7
+
 /* Owned by CONFIG_UART2_0 as  */
 extern const uint_least8_t CONFIG_GPIO_UART2_0_TX_CONST;
 #define CONFIG_GPIO_UART2_0_TX 13
@@ -68,6 +74,8 @@ extern const uint_least8_t GPIO_pinUpperBound;
 extern const uint_least8_t              CONFIG_NVSINTERNAL_CONST;
 #define CONFIG_NVSINTERNAL              0
 #define CONFIG_TI_DRIVERS_NVS_COUNT     1
+
+
 
 
 /*

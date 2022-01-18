@@ -12,11 +12,16 @@ SYSCFG_SRCS += \
 C_SRCS += \
 ../main_tirtos.c \
 ../nvsinternal.c \
+./syscfg/ti_easylink_config.c \
 ./syscfg/ti_devices_config.c \
+./syscfg/ti_radio_config.c \
 ./syscfg/ti_drivers_config.c 
 
 GEN_FILES += \
+./syscfg/ti_easylink_config.c \
+./syscfg/device_config.opt \
 ./syscfg/ti_devices_config.c \
+./syscfg/ti_radio_config.c \
 ./syscfg/ti_drivers_config.c 
 
 GEN_MISC_DIRS += \
@@ -25,16 +30,25 @@ GEN_MISC_DIRS += \
 C_DEPS += \
 ./main_tirtos.d \
 ./nvsinternal.d \
+./syscfg/ti_easylink_config.d \
 ./syscfg/ti_devices_config.d \
+./syscfg/ti_radio_config.d \
 ./syscfg/ti_drivers_config.d 
+
+GEN_OPTS += \
+./syscfg/device_config.opt 
 
 OBJS += \
 ./main_tirtos.obj \
 ./nvsinternal.obj \
+./syscfg/ti_easylink_config.obj \
 ./syscfg/ti_devices_config.obj \
+./syscfg/ti_radio_config.obj \
 ./syscfg/ti_drivers_config.obj 
 
 GEN_MISC_FILES += \
+./syscfg/ti_easylink_config.h \
+./syscfg/ti_radio_config.h \
 ./syscfg/ti_drivers_config.h \
 ./syscfg/ti_utils_build_linker.cmd.genlibs \
 ./syscfg/syscfg_c.rov.xs \
@@ -47,10 +61,14 @@ GEN_MISC_DIRS__QUOTED += \
 OBJS__QUOTED += \
 "main_tirtos.obj" \
 "nvsinternal.obj" \
+"syscfg/ti_easylink_config.obj" \
 "syscfg/ti_devices_config.obj" \
+"syscfg/ti_radio_config.obj" \
 "syscfg/ti_drivers_config.obj" 
 
 GEN_MISC_FILES__QUOTED += \
+"syscfg/ti_easylink_config.h" \
+"syscfg/ti_radio_config.h" \
 "syscfg/ti_drivers_config.h" \
 "syscfg/ti_utils_build_linker.cmd.genlibs" \
 "syscfg/syscfg_c.rov.xs" \
@@ -60,17 +78,24 @@ GEN_MISC_FILES__QUOTED += \
 C_DEPS__QUOTED += \
 "main_tirtos.d" \
 "nvsinternal.d" \
+"syscfg/ti_easylink_config.d" \
 "syscfg/ti_devices_config.d" \
+"syscfg/ti_radio_config.d" \
 "syscfg/ti_drivers_config.d" 
 
 GEN_FILES__QUOTED += \
+"syscfg/ti_easylink_config.c" \
+"syscfg/device_config.opt" \
 "syscfg/ti_devices_config.c" \
+"syscfg/ti_radio_config.c" \
 "syscfg/ti_drivers_config.c" 
 
 C_SRCS__QUOTED += \
 "../main_tirtos.c" \
 "../nvsinternal.c" \
+"./syscfg/ti_easylink_config.c" \
 "./syscfg/ti_devices_config.c" \
+"./syscfg/ti_radio_config.c" \
 "./syscfg/ti_drivers_config.c" 
 
 SYSCFG_SRCS__QUOTED += \

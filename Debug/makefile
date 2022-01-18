@@ -4,14 +4,17 @@
 
 CG_TOOL_ROOT := /home/pramodh/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS
 
-GEN_OPTS__FLAG := --cmd_file="/home/pramodh/workspace_v11/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt" 
+GEN_OPTS__FLAG := --cmd_file="syscfg/device_config.opt" --cmd_file="/home/pramodh/workspace_v11/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt" 
 GEN_CMDS__FLAG := -l"/home/pramodh/workspace_v11/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/linker.cmd" 
 
 ORDERED_OBJS += \
 "./main_tirtos.obj" \
 "./nvsinternal.obj" \
+"./syscfg/ti_easylink_config.obj" \
 "./syscfg/ti_devices_config.obj" \
+"./syscfg/ti_radio_config.obj" \
 "./syscfg/ti_drivers_config.obj" \
+"./easylink/EasyLink.obj" \
 "../cc13x2_cc26x2_tirtos.cmd" \
 -lti_utils_build_linker.cmd.genlibs \
 $(GEN_CMDS__FLAG) \
@@ -26,7 +29,9 @@ RMDIR := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include easylink/subdir_vars.mk
 -include subdir_rules.mk
+-include easylink/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -160,8 +165,8 @@ nvsinternal_CC1352R1_LAUNCHXL_tirtos_ccs.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main_tirtos.obj" "nvsinternal.obj" "syscfg/ti_devices_config.obj" "syscfg/ti_drivers_config.obj" 
-	-$(RM) "main_tirtos.d" "nvsinternal.d" "syscfg/ti_devices_config.d" "syscfg/ti_drivers_config.d" 
+	-$(RM) "main_tirtos.obj" "nvsinternal.obj" "syscfg/ti_easylink_config.obj" "syscfg/ti_devices_config.obj" "syscfg/ti_radio_config.obj" "syscfg/ti_drivers_config.obj" "easylink/EasyLink.obj" 
+	-$(RM) "main_tirtos.d" "nvsinternal.d" "syscfg/ti_easylink_config.d" "syscfg/ti_devices_config.d" "syscfg/ti_radio_config.d" "syscfg/ti_drivers_config.d" "easylink/EasyLink.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
 	-@echo ' '

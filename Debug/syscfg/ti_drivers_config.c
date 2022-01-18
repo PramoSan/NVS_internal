@@ -97,8 +97,8 @@ GPIO_PinConfig gpioPinConfigs[31] = {
     GPIO_CFG_NO_DIR, /* DIO_3 */
     GPIO_CFG_NO_DIR, /* DIO_4 */
     GPIO_CFG_NO_DIR, /* DIO_5 */
-    GPIO_CFG_NO_DIR, /* DIO_6 */
-    GPIO_CFG_NO_DIR, /* DIO_7 */
+    GPIO_CFG_OUTPUT_INTERNAL | GPIO_CFG_OUT_STR_MED | GPIO_CFG_OUT_LOW, /* CONFIG_GPIO_RLED */
+    GPIO_CFG_OUTPUT_INTERNAL | GPIO_CFG_OUT_STR_MED | GPIO_CFG_OUT_LOW, /* CONFIG_GPIO_GLED */
     GPIO_CFG_NO_DIR, /* DIO_8 */
     GPIO_CFG_NO_DIR, /* DIO_9 */
     GPIO_CFG_NO_DIR, /* DIO_10 */
@@ -141,6 +141,8 @@ GPIO_CallbackFxn gpioCallbackFunctions[31];
  */
 void* gpioUserArgs[31];
 
+const uint_least8_t CONFIG_GPIO_RLED_CONST = CONFIG_GPIO_RLED;
+const uint_least8_t CONFIG_GPIO_GLED_CONST = CONFIG_GPIO_GLED;
 const uint_least8_t CONFIG_GPIO_UART2_0_TX_CONST = CONFIG_GPIO_UART2_0_TX;
 const uint_least8_t CONFIG_GPIO_UART2_0_RX_CONST = CONFIG_GPIO_UART2_0_RX;
 
@@ -235,6 +237,27 @@ const PowerCC26X2_Config PowerCC26X2_config = {
     .calibrateRCOSC_HF        = true,
     .enableTCXOFxn            = NULL
 };
+
+
+/*
+ *  =============================== RF Driver ===============================
+ */
+#include <ti/drivers/GPIO.h>
+#include <ti/devices/DeviceFamily.h>
+#include DeviceFamily_constructPath(driverlib/ioc.h)
+#include <ti/drivers/rf/RF.h>
+
+/*
+ * Platform-specific driver configuration
+ */
+const RFCC26XX_HWAttrsV2 RFCC26XX_hwAttrs = {
+    .hwiPriority        = (~0),
+    .swiPriority        = (uint8_t)0,
+    .xoscHfAlwaysNeeded = true,
+    .globalCallback     = NULL,
+    .globalEventMask    = 0
+};
+
 
 /*
  *  =============================== UART2 ===============================
@@ -425,6 +448,8 @@ void Board_init(void)
     /* ==== /ti/drivers/GPIO initialization ==== */
     /* Setup GPIO module and default-initialise pins */
     GPIO_init();
+
+    /* ==== /ti/drivers/RF initialization ==== */
 
     Board_shutDownExtFlash();
 

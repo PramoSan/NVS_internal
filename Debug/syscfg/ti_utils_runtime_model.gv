@@ -2,12 +2,23 @@ digraph Model
 {
     graph[rankdir=LR]
 
+    // mod.$name=/ti/common/multi_stack_validate
+
     // mod.$name=/ti/devices/CCFG
     ti_devices_CCFG -> ti_devices_CCFGTemplate0
 
     // mod.$name=/ti/devices/CCFGTemplate
 
     // mod.$name=/ti/devices/DriverLib
+
+    // mod.$name=/ti/devices/radioconfig/code_export_param
+
+    // mod.$name=/ti/devices/radioconfig/rfdesign
+
+    // mod.$name=/ti/devices/radioconfig/settings/prop
+    EasyLink_RF_Custom_Setting -> ti_drivers_RF
+    EasyLink_RF_Custom_Setting -> ti_devices_radioconfig_rfdesign
+    EasyLink_RF_Custom_Setting -> ti_devices_radioconfig_code_export_param0
 
     // mod.$name=/ti/display/Display
     CONFIG_Display_0 -> ti_drivers_Board
@@ -33,6 +44,10 @@ digraph Model
     ti_drivers_Power -> ti_devices_CCFG
     ti_drivers_Power -> ti_drivers_Board
 
+    // mod.$name=/ti/drivers/RF
+    ti_drivers_RF -> ti_drivers_Power
+    ti_drivers_RF -> ti_drivers_Board
+
     // mod.$name=/ti/drivers/UART2
     CONFIG_UART2_0 -> ti_drivers_DMA
     CONFIG_UART2_0 -> ti_drivers_Power
@@ -41,4 +56,10 @@ digraph Model
     CONFIG_UART2_0 -> CONFIG_GPIO_UART2_0_RX
 
     // mod.$name=/ti/drivers/nvs/NVSCC26XX
+
+    // mod.$name=/ti/easylink/easylink
+    ti_easylink_easylink -> ti_drivers_RF
+    ti_easylink_easylink -> ti_devices_radioconfig_rfdesign
+    ti_easylink_easylink -> ti_common_multi_stack_validate
+    ti_easylink_easylink -> EasyLink_RF_Custom_Setting
 }

@@ -24,6 +24,9 @@
 /* libraries required for /ti/display */
 -l"ti/display/lib/ccs/m4f/display_cc13x2.a"
 
+/* libraries required for /ti/drivers/RF */
+-l"ti/drivers/rf/lib/ccs/m4f/rf_multiMode_cc13x2.a"
+
 /* libraries required for /ti/drivers */
 -l"ti/drivers/lib/ccs/m4f/drivers_cc13x2.a"
 -l"ti/grlib/lib/ccs/m4f/grlib.a"
